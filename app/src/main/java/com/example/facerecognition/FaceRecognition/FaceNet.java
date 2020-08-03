@@ -16,7 +16,7 @@ import java.nio.channels.FileChannel;
 import java.util.Arrays;
 
 public class FaceNet {
-    private static final String MODEL_PATH = "facenet.tflite";
+    private static final String MODEL_PATH = "facenet_heloise.tflite";
 
     private static final float IMAGE_MEAN = 127.5f;
     private static final float IMAGE_STD = 127.5f;
