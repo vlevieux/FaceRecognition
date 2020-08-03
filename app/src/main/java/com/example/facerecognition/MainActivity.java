@@ -208,6 +208,8 @@ public class MainActivity extends AppCompatActivity {
                     imageStream = getContentResolver().openInputStream(imageUri);
                 }
                 image1 = BitmapFactory.decodeStream(imageStream);
+                float scale = (float) 1000 / image1.getWidth();
+                image1 = Bitmap.createScaledBitmap(image1, (int)(image1.getWidth()*scale), (int)(image1.getHeight()*scale), true);
                 imageView1.setImageBitmap(image1);
                 textView.setText("");
             } catch (FileNotFoundException e) {
@@ -225,6 +227,8 @@ public class MainActivity extends AppCompatActivity {
                     imageStream = getContentResolver().openInputStream(imageUri);
                 }
                 image2 = BitmapFactory.decodeStream(imageStream);
+                float scale = (float) 1000 / image2.getWidth();
+                image2 = Bitmap.createScaledBitmap(image2, (int)(image2.getWidth()*scale), (int)(image2.getHeight()*scale), true);
                 imageView2.setImageBitmap(image2);
                 textView.setText("");
             } catch (FileNotFoundException e) {
